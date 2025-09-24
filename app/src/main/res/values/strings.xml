@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">FirstChallenge</string>
+    <string name="app_name">My Application</string>
+    <string name="welcome_message">Discover Your Dream Job here</string>
+    <string name="welcome_message_subtitle">Explore all the existing job roles based on your interest and study major</string>
+    <string name="welcome_btn_action_login">Login</string>
+    <string name="welcome_btn_action_register">Register</string>
+    <string name="login_title">Login here</string>
+    <string name="login_subtitle">Welcome back you’ve been missed!</string>
+    <string name="login_email_input">Email</string>
+    <string name="login_pssw_input">Password</string>
+    <string name="login_forgot">Forgot your password?</string>
+    <string name="login_sign_in_button">Sign in</string>
 </resources>
