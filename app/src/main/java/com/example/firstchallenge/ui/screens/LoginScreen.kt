@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
@@ -17,13 +19,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.firstchallenge.ui.components.TitleComponent
 import com.example.firstchallenge.R
+import com.example.firstchallenge.ui.components.ButtonComponent
 import com.example.firstchallenge.ui.components.InputComponent
+import com.example.firstchallenge.ui.components.SmallButton
+import com.example.firstchallenge.ui.components.SocialComponent
 import com.example.firstchallenge.ui.components.SubTitleComponent
 
 import org.w3c.dom.Text
@@ -41,7 +47,7 @@ fun LoginScreen(modifier: Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ){
-            Spacer(modifier = Modifier.height(120.dp))
+            Spacer(modifier = Modifier.height(60.dp))
             TitleComponent(stringResource(R.string.login_title))
             Spacer(modifier = Modifier.height(20.dp))
             SubTitleComponent(stringResource(R.string.login_subtitle))
@@ -76,7 +82,6 @@ fun LoginScreen(modifier: Modifier) {
                     width = 2.dp,
                     color = Color(0xff1f41bb),
                     shape = RoundedCornerShape(10.dp),
-
                     )
 
             )
@@ -98,5 +103,55 @@ fun LoginScreen(modifier: Modifier) {
 
             )
         }
+        Spacer(modifier = Modifier.height(20.dp))
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center) {
+
+            ButtonComponent(stringResource(R.string.login_sign_in_button),
+                modifier = Modifier.width(300.dp)
+            )
+
+
+
+
+        }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            SmallButton(stringResource(R.string.login_new_account),
+                modifier = Modifier.width(300.dp))
+
+
+        }
+
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Column (
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center)
+        {
+            Text(
+                text = stringResource(R.string.login_continue),
+                color = Color.Blue,
+                fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                fontWeight = FontWeight.SemiBold
+            )
+
+            Row (horizontalArrangement = Arrangement.spacedBy(20.dp),
+                verticalAlignment = Alignment.CenterVertically,){
+                SocialComponent(R.drawable.google,Modifier.width(50.dp))
+                SocialComponent(R.drawable.facebook,Modifier.width(50.dp))
+                SocialComponent(R.drawable.apple,Modifier.width(50.dp))
+            }
+        }
+
     }
 }

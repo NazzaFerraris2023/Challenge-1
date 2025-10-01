@@ -1,6 +1,7 @@
 package com.example.firstchallenge.ui.components
 
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -32,7 +33,10 @@ fun InputComponent(initialText: String ,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
             disabledIndicatorColor = Color.Transparent,
-            errorIndicatorColor = Color.Transparent
+            errorIndicatorColor = Color.Transparent,
+
+            focusedContainerColor = Color.White,
+            unfocusedContainerColor = Color.White,
         )
     )
 
