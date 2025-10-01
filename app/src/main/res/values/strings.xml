@@ -13,4 +13,11 @@
     <string name="login_new_account">Create new account</string>
     <string name="login_continue">Or continue with</string>
 
+    <string name="register_title">Create Account</string>
+    <string name="register_subtitle">Create an account so you can explore all the existing jobs</string>
+    <string name="register_confirm_pssw">Confirm Password</string>
+    <string name="register_sign_up">Sign up</string>
+    <string name="register_account">Already have an account</string>
+
+
 </resources>
